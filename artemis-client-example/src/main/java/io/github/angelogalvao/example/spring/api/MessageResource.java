@@ -24,8 +24,8 @@ public class MessageResource {
     @RequestMapping("/sendTestMessage")
     public void sendTestMessage() {
 
-      log.info("Sending the message {} to the destination {}", message, destination);
-		  jmsTemplate.convertAndSend(destination, message);
+      log.info("Sending the message \"{}\" to the destination \"{}\"", message, destination);
+      jmsTemplate.convertAndSend(destination, message);
 
     }
 }
